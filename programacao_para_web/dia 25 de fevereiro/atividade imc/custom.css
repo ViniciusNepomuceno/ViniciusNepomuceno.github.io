@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: cadetblue;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+h1{
+    margin-bottom: 20px;
+    background-color: black;
+    border-style: inset;
+}
+h4{
+    margin-top: 20px;
+}
+form{
+background-color: black;
+padding: 10px;
+border-style: inset;
+}
+label{
+    display: block;
+    margin-bottom: 1px;
+}
+input{
+    padding: 2px;
+    width: 110px;
+}
+button{
+    margin-top: 10px;
+    padding: 5px 10px;
+    color: black;
+    border: outset;
+    cursor: pointer;
+}
+button:hover{
+    background-color: gray;
+}
+#resultado{
+    margin-top: 20px;
+    background-color: black;
+    padding: 10px;
+    border-style: inset;
+}
+p{
+    font-size: 18px;
+}

@@ -1,0 +1,49 @@
+class veiculo:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+    def descrever(self):
+        return f"{self.ano} {self.marca} {self.modelo}"
+    
+class carro(veiculo):
+    def __init__(self, marca, modelo, ano, num_portas):
+        super().__init__(marca, modelo, ano)
+        self.num_portas = num_portas
+    def descrever(self):
+        return super().descrever() + f" com {self.num_portas} portas"
+
+class caminhao(veiculo):
+    def __init__(self, marca, modelo, ano, capacidade_carga):
+        super().__init__(marca, modelo, ano)
+        self.capacidade_carga = capacidade_carga
+    def carregar(self, peso):
+        if peso <= self.capacidade_carga:
+            return f"Caminhão carregado com {peso} kg"
+        else:
+            return f"Peso excede a capacidade de carga de {self.capacidade_carga} kg"
+    def descrever(self):
+        return super().descrever() + f" com capacidade de carga de {self.capacidade_carga} kg"
+
+frota = [
+    carro("Honda", "Civic", 2021, 4),
+    caminhao("Scania", "R500", 2020, 25000)
+]
+
+while True:
+    print("1. Listar veículos")
+    print("2. Carregar caminhão")
+    print("3. Sair")
+    escolha = input("Escolha uma opção: ")
+    
+    if escolha == "1":
+        for veiculo in frota:
+            print(veiculo.descrever())
+    elif escolha == "2":
+        peso = float(input("Digite o peso a ser carregado (kg): "))
+        resultado = frota[1].carregar(peso)
+        print(resultado)
+    elif escolha == "3":
+        break
+else:
+    print("Opção inválida, tente novamente.")

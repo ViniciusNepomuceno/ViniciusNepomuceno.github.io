@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de cadastro</title>
+</head>
+<body>
+
+    <form id="id_formulario">
+        <fieldset>
+            <legend>Cadastro</legend>
+
+            <label for="id_nome">Nome:
+                <input 
+                    type="text"
+                    id="id_nome"
+                    placeholder="Informe seu nome"
+                    required
+                    >
+            </label>
+            <br>
+
+            <label for="id_email">E-mail:
+                <input 
+                    type="email"
+                    id="id_email"
+                    placeholder="Informe seu e-mail"
+                    required
+                    >
+            </label>
+            <br>
+
+            <label for="id_idade">Idade:
+                <input 
+                    type="number"
+                    id="id_idade"
+                    placeholder="Informe sua idade"
+                    required
+                    >
+            </label>
+            <fieldset>
+                <legend>Radio - Sexo:</legend>
+                <label for="m">Masculino
+                    <input
+                    type="radio"
+                    name="radio_s"
+                    id="m"
+                    value="Masculino"
+                    >
+                </label>
+                <label for="f">Feminino
+                    <input
+                    type="radio"
+                    name="radio_s"
+                    id="f"
+                    value="Feminino"
+                    >
+                </label>
+                <label for="o">Outro
+                    <input
+                    type="radio"
+                    name="radio_s"
+                    id="o"
+                    value="Outro"
+                    >
+            </fieldset>
+
+            <fieldset>
+                <legend>Checkbox - Tecnologias:</legend>
+                <label for="c">C
+                    <input
+                    type="checkbox"
+                    name="checkbox_s"
+                    id="c"
+                    value="C"
+                    >
+                </label>
+                <label for="java">Java
+                    <input
+                    type="checkbox"
+                    name="checkbox_s"
+                    id="java"
+                    value="Java"
+                    >
+                </label>
+                <label for="python">Python
+                    <input
+                    type="checkbox"
+                    name="checkbox_s"
+                    id="python"
+                    value="Python"
+                    >
+                </label>
+                <label for="javascript">JavaScript
+                    <input
+                    type="checkbox"
+                    name="checkbox_s"
+                    id="javascript"
+                    value="JavaScript"
+                    >
+                </label>
+            </fieldset>
+        <fieldset>
+                <legend>Hobbies</legend>
+                <select name="hobbies" id="id_hobbies">
+                    <option value="">Selecione um hobby</option>
+                    <optgroup label="Hobbies de lazer">
+                        <option value="leitura">Leitura</option>
+                        <option value="cinema">Cinema</option>
+                        <option value="viagem">Viagem</option>
+                    </optgroup>
+                    <optgroup label="Hobbies esportivos">
+                        <option value="futebol">Futebol</option>
+                        <option value="basquete">Basquete</option>
+                        <option value="criquete">Criquete</option>
+                    </optgroup>
+                </select>
+        </fieldset>
+
+            
+                <label>
+                    <button type="submit">Cadastrar</button>
+                    <button type="reset">Limpar</button>
+                </label>
+    </form>
+
+<div id="id_resultado"></div>
+
+    <script src="script_externo.js"></script>
+</body>
+</html>
