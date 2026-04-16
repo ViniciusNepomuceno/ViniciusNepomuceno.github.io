@@ -58,7 +58,69 @@
                 >
                 Cebola
             </label>
-            <br>
+            <label for="azeitona">
+                <input
+                    type="checkbox"
+                    id="azeitona"
+                    name="ingredientes"
+                    value="azeitona"
+                >
+                Azeitona
+            </label>
+            <label for="presunto">
+                <input
+                    type="checkbox"
+                    id="presunto"
+                    name="ingredientes"
+                    value="presunto"
+                >
+                Presunto
+            </label>
+            <label for="bacon">
+                <input
+                    type="checkbox"
+                    id="bacon"
+                    name="ingredientes"
+                    value="bacon"
+                >
+                Bacon
+            </label>
+             <label for="frango">
+                <input
+                    type="checkbox"
+                    id="frango"
+                    name="ingredientes"
+                    value="frango"
+                >
+                Frango
+            </label>
+            <label for="catupiry">
+                <input
+                    type="checkbox"
+                    id="catupiry"
+                    name="ingredientes"
+                    value="catupiry"
+                >
+                Catupiry
+            </label>
+             <label for="cheddar">
+                <input
+                    type="checkbox"
+                    id="cheddar"
+                    name="ingredientes"
+                    value="cheddar"
+                >
+                Cheddar
+            </label>
+            <label for="doritos">
+                <input
+                    type="checkbox"
+                    id="doritos"
+                    name="ingredientes"
+                    value="doritos"
+                >
+                Doritos
+            </label>
         </fieldset>
         <fieldset>
             <legend>Escolha o tamanho da sua pizza</legend>
@@ -98,6 +160,33 @@
                 >
                 Família (12 fatias)
             </label>
+        </fieldset>
+        <fieldset>
+            <legend>Escolha o tipo de borda</legend>
+            <select name="borda" id="borda">
+                <option value="normal">Normal</option>
+                <optgroup label="Recheada">
+                    <option value="catupiry">Catupiry</option>
+                    <option value="cheddar">Cheddar</option>
+                    
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Escolha o refrigerante</legend>
+            <select name="refrigerante" id="refrigerante">
+                <option value="sem">Sem refrigerante</option>
+                <option value="coca">Coca-Cola</option>
+                <option value="cocazero">Coca-Cola Zero</option>
+                <option value="pepsi">Pepsi</option>
+                <option value="pepsiblack">Pepsi Black</option>
+                <option value="guarana">Guaraná</option>
+                <option value="guaranazero">Guaraná Zero</option>
+                <option value="guaranajesus">Guaraná Jesus</option>
+                <option value="fantalaranja">Fanta Laranja</option>
+                <option value="fantauva">Fanta Uva</option>
+                <option value="saogeraldo">São Geraldo</option>
+            </select>
         </fieldset>
         <fieldset>
             <legend>Escolha o tipo de massa</legend>
@@ -163,6 +252,8 @@ h3 {
     const nome = document.getElementById('nome').value;
     const ingredientes = Array.from(document.querySelectorAll('input[name="ingredientes"]:checked')).map(input => input.value);
     const tamanho = Array.from(document.querySelectorAll('input[name="tamanho"]:checked')).map(input => input.value);
+    const borda = document.getElementById('borda').value;
+    const refrigerante = document.getElementById('refrigerante').value;
     const massa = document.getElementById('massa').value;
     const endereco = document.getElementById('endereco').value;
 
@@ -172,6 +263,8 @@ h3 {
         <p><strong>Nome:</strong> ${nome}</p>
         <p><strong>Ingredientes:</strong> ${ingredientes.join(', ')}</p>
         <p><strong>Tamanho:</strong> ${tamanho.join(', ')}</p>
+        <p><strong>Borda:</strong> ${borda}</p>
+        <p><strong>Refrigerante:</strong> ${refrigerante}</p>
         <p><strong>Massa:</strong> ${massa}</p>
         <p><strong>Endereço de Entrega:</strong> ${endereco}</p>
     `;
