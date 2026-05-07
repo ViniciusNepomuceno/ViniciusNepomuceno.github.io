@@ -1,0 +1,36 @@
+
+
+alunos = []
+
+def cadastrar_aluno():
+    nome = input("Digite o nome do aluno: ")
+    idade = int(input("Digite a idade do aluno: "))
+    alunos.append({"nome": nome, "idade": idade})
+
+
+def listar_aluno():
+    if not alunos:
+        print("Nenhum aluno cadastrado.")
+    else:
+        for aluno in alunos:
+            print(f"Nome: {aluno['nome']}, Idade: {aluno['idade']}")
+
+def exibir_menu():
+    print("1. Cadastar aluno")
+    print("2. Listar alunos")
+    print("3. Sair")
+
+def main():
+    while True:
+        exibir_menu()
+        opcao = int(input("Escolha um opção: "))
+        if opcao == 1:
+            cadastrar_aluno()
+        elif opcao == 2:
+            listar_aluno()
+        elif opcao == 3:
+            print("Saindo...")
+            break
+
+if __name__ == "__main__":
+    main()

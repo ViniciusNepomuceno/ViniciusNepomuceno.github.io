@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adivinhe o número - Tema Tigrinho</title>
+    <title>Adivinhe o número - Tema Angola</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            background-color: red;
+            color: yellow;
+        }
+        h2 {
+            color: red;
+        }
+        p {
+            font-size: 18px;
+            color: yellow;
+        }
+        #mensagem {
+            margin-top: 20px;
+            font-size: 24px;
+            color: yellow;
+        }
+    </style>
 </head>
 <body>
+    <audio autoplay loop src="Os Namayer - Maico Jackson (Kuduro) (Prod. By Dj Gaston Júnior) - Naice Da Net - Bloguer Da Cidade.mp3"></audio>
+    <img src="Emblem_of_Angola.svg.png" alt="BRASÃO DE ANGOLA" width="200">
+    <h1>AngolaBET</h1>
+    <h2>Adivinhe de 1 a 10 e ganha um trilhão de kwanzas</h1>
+    <p>Você tem 3 tentativas até 11 da manhã</p>
+
+    <input type="number" id="palpite" min="1" max="10">
+    <button onclick="verificarPalpite()">Tentar</button>
+
+    <div id="mensagem"></div>
     <script src="script.js"></script>
 </body>
 </html>
