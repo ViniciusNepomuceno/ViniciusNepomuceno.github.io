@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotérica da Informática</title>
+</head>
+<body>
+    <form id="formulario">
+        <fieldset>
+            <legend>Fila da lotérica</legend>
+            <label for="nome">Nome:
+                <input
+                type="text"
+                placeholder="Informe seu nome"
+                id="nome"
+                class="caixa_entrada"
+                required
+                >
+            </label>
+
+            <div>
+                <label for="normal">
+                    <input 
+                    type="radio"
+                    name="tipo_atendimento"
+                    id="normal"
+                    value="normal"
+                    class="caixa_entrada"
+                    >Normal
+                </label>
+
+                <label for="prioridade">
+                    <input
+                    type="radio"
+                    name="tipo_atendimento"
+                    id="prioridade"
+                    value="prioridade"
+                    class="caixa_entrada"
+                    >Prioridade
+                </label>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+            <input type="button" id="btn_consultar" onclick="listar()" value="Consultar">
+
+        </fieldset>
+    </form>
+
+    <div>
+        <fieldset id="resultado_espera">
+            <legend>Fila de espera</legend>
+        </fieldset>
+        <br>
+        <input type="button" id="btn_atender" onclick="atender()" value="Atender">
+        <input type="button" id="btn_não_esperou" onclick="naoEsperou()" value="O último não esperou">
+    </div>
+
+<style>
+    #nome{
+        margin-bottom: 5px;
+    }
+    #normal, #prioridade{
+        margin-bottom: 5px;
+        background-color: darkred;
+        color:whitesmoke;
+    }
+    input, button, ::placeholder{
+        margin-left: 1px;
+        background-color: darkred;
+        color:whitesmoke;
+    }
+    body{
+        background-color: whitesmoke;
+    }
+    legend{
+        font-size: 20px;
+        color: darkred;
+    }
+    #resultado_espera{
+        color: darkred;
+    }
+    fieldset{
+        color: darkred;
+    }
+
+</style>
+<script src="loterica.js"></script>
+</body>
+</html>
