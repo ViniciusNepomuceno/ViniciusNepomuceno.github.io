@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+    <form id="id_form">
+        <fieldset>
+            <legend>Cadastro</legend>
+            <label for="id_nome">Nome:
+                <input
+                type="text"
+                id="id_nome"
+                placeholder="Inserir nome"
+                required
+                >
+            </label>
+
+            <button type="submit">Salvar</button>
+        </fieldset>
+    </form>
+    <div>
+        <fieldset>
+            <legend>LocalStorage</legend>
+            <div id="resultado"></div>
+        </fieldset>
+    </div>
+    <style>
+        fieldset{
+            margin: 10px;
+            padding: 10px;
+            color: mediumpurple;
+        }
+        html{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: black;
+        }
+    </style>
+    <script src="script_externo.js"></script>
+</body>
+</html>

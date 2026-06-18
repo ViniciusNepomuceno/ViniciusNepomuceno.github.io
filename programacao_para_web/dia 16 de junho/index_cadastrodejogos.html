@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - CPJ</title>
+</head>
+<body>
+    <h1>Cadastro Pessoal de Jogos</h1>
+    <h4>Insira os jogos que você possui</h4>
+    <form id="id_cadastro">
+        <input type="hidden" id="id">
+        <label for="id_nome">Nome:
+            <input
+                type="text"
+                id="id_nome"
+                placeholder="Insira o nome"
+                required
+                >
+        </label>
+        <br>
+        <label for="id_produtora">Produtora:
+            <input
+                type="text"
+                id="id_produtora"
+                placeholder="Insira a produtora"
+                required
+                >
+        </label>
+        <br>
+        <label for="id_ano">Ano:
+            <input
+                type="number"
+                id="id_ano"
+                placeholder="Insira o ano de lançamento"
+                required
+                >
+        </label>
+        <br>
+        <label for="id_categoria">Categoria:
+            <input
+                type="text"
+                id="id_categoria"
+                placeholder="Insira a categoria"
+                required
+                >
+        </label>
+        <br>
+        <label for="id_plataformas">Plataformas:
+            <input
+                type="text"
+                id="id_plataformas"
+                placeholder="Insira as plataformas disponiveis"
+                required
+                >
+        </label>
+    <button id="btn_cadastro">Cadastrar</button>
+    </form>
+
+    <fieldset>
+        <legend>Jogos Cadastrados</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Produtora</th>
+                    <th>Ano</th>
+                    <th>Categoria</th>
+                    <th>Plataformas</th>
+                </tr>
+            </thead>
+            <tbody id="jogos_cadastrados">
+                </tbody>
+        </table>
+    </fieldset>
+    <br>
+
+    <link rel="stylesheet" href="style_cadastrodejogos.css">
+    <script src="script_cadastrodejogos.js"></script>
+</body>
+</html>

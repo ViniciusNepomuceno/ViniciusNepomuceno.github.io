@@ -1,0 +1,30 @@
+html{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+input{
+    width: 28%;
+    margin: 3px;
+    background-color: transparent;
+    color: turquoise;
+    border: 2px solid turquoise;
+}
+body{
+    background-color: darkblue;
+    color: turquoise;
+}
+button{
+    background-color: transparent;
+    border: 2px solid turquoise;
+    color: turquoise;
+}
+fieldset{
+    background-color: transparent;
+    border: 2px solid turquoise;
+    color: turquoise;
+    margin-top: 10px;
+}
+table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
